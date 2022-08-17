@@ -14,7 +14,7 @@ public class SpringJenkinsApplication {
 	@PostConstruct
 	publid void init(){
 		logger.info("Application started...");
-
+	}
 
 	@GetMapping("/ping")
 	public String message() {
