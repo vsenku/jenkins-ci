@@ -9,6 +9,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class SpringJenkinsApplication {
 
+	public static Logger logger = LoggerFactory.getLogger(SpringJenkinsApplication.class);
+	
+	@PostConstruct
+	publid void init(){
+		logger.info("Application started...");
+
 
 	@GetMapping("/ping")
 	public String message() {
@@ -16,6 +22,7 @@ public class SpringJenkinsApplication {
 	}
 
 	public static void main(String[] args) {
+		logger.info("Application executed...");
 		SpringApplication.run(SpringJenkinsApplication.class, args);
 	}
 
